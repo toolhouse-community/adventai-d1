@@ -1,0 +1,342 @@
+@font-face {
+  font-family: cinetype;
+  src: url('/app/fonts/GT-Cinetype-Mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes fadeAndSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1; /* Starting with a faint opacity to simulate old monitor effect */
+  }
+  50% {
+    opacity: 1; /* Fully opaque at the midpoint */
+  }
+  51% {
+    opacity: 0.5; /* Fully opaque at the midpoint */
+  }
+  100% {
+    opacity: 0.1; /* Ending with a faint opacity */
+  }
+}
+
+.blink {
+  animation: blink 1.5s infinite;
+}
+
+.fade-slide {
+  animation: fadeAndSlide 0.3s ease-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.fade-in.slow {
+  animation-duration: 2s;
+}
+
+.animate-delay {
+  animation-delay: 0.3s;
+}
+
+html * {
+  font-family: cinetype, monospace;
+  overscroll-behavior: none;
+}
+
+body {
+  background-color: #000;
+  color: #aaa;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 60%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #08f;
+  text-shadow: 0 0 2px #000;
+}
+
+p, span, a {
+  color: #aaa;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted #5f8b6b;
+}
+
+a:hover {
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea, form label, form button {
+  display: block;
+  margin: 0.5rem;
+  color: #ccc
+}
+
+form textarea {
+  height: 60px;
+  resize: none;
+}
+
+button, input[type="button"], input[type="submit"] {
+  background-color: #1f96ff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: #08f;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+textarea {
+  background-color: #222;
+  color: #aaa;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #08f;
+}
+
+/* Table Styles */
+table {
+  background-color: #222;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  color: #5f8b6b;
+  padding: 0.5rem;
+  border: 1px solid #444;
+}
+
+th {
+  background-color: #333;
+}
+
+li {
+  padding: 0.5rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Code Block Styles */
+code {
+  background-color: #22222288;
+  color: #08f;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+pre {
+  background-color: #222888;
+  padding: 0.5rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+}
+
+#auto-resize-textbox {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: cinetype;
+  color: inherit;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  outline: none;
+}
+
+main-app {
+  height: calc(100vh - 54px - 38px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Add this */
+}
+
+chat-history-container {
+  flex: 1 1 auto; /* Change from flex: 2 */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  min-height: 0;
+  max-height: 100%; /* Add this */
+}
+
+chat-history-container img {
+  max-width: 100%;
+}
+
+chat-history-container div {
+  border-radius: 8px;
+  margin: 0.5rem 0 1rem;
+  padding: 0 1rem;
+  color: #ccc;
+}
+
+chat-history-container div.user {
+  margin-left: 40%;
+  background: #08f;
+}
+
+chat-history-container div.assistant {
+  background: #181818;
+  margin-right: 40%;
+}
+
+.success,
+chat-history-container div.assistant.success {
+  background: #3E8E41;
+}
+
+.error,
+chat-history-container div.assistant.error {
+  background: hsl(0, 64%, 42%);
+}
+
+chat-history-container div.assistant h1, 
+chat-history-container div.assistant h2, 
+chat-history-container div.assistant h3, 
+chat-history-container div.assistant h4, 
+chat-history-container div.assistant h5, 
+chat-history-container div.assistant h6,
+chat-history-container div.assistant p {
+  color: #c8c8c8;
+}
+
+chat-history-container div.user h1, 
+chat-history-container div.user h2, 
+chat-history-container div.user h3, 
+chat-history-container div.user h4, 
+chat-history-container div.user h5, 
+chat-history-container div.user h6,
+chat-history-container div.user p {
+  color: #eee;
+}
+
+resizable-texarea {
+  flex: 1;
+  max-height: 200px;
+}
+
+success-message {
+  background: #08f;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+success-message h1 {
+  color: #fff;
+}
+
+success-message p {
+  color: #c8c8c8;
+}
+
+action-box {
+  /* display: flex;
+  flex-wrap: wrap; */
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1rem 0;
+}
+
+action-box button {
+  /* flex-basis: calc(50% - 10px);
+  max-width: calc(50% - 10px); */
+  text-align: left;
+  color: #c8c8c8;
+  padding: 1rem;
+}
+
+action-box button b {
+  display: block;
+  color: #fff;
+}
+
+generic-icon svg {
+  color: #08f;
+  width: 2em;
+}
+
+main#error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main#error.hidden {
+  display: none;
+}
+
+main#error > * {
+  text-align: center;
+  opacity: 0;
+}

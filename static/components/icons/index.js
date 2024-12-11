@@ -1,0 +1,1 @@
+export { UtensilsCrossedIcon } from "./utensils-crossed-icon.js";
