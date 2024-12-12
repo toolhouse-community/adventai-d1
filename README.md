@@ -82,9 +82,9 @@ The app can deploy on any service that can host Python 3.12. For convenience, we
 - [![Fork](https://img.shields.io/badge/CLONE%20THIS%20REPO-0088FF?style=for-the-badge)](https://github.com/new?template_owner=toolhouse-community&template_name=adventai-d1&owner=%40me&name=th-adventai-d1&description=AdventAI+Day+1+Fork&visibility=public)
   
   Or Create a [Fork](https://github.com/new?template_owner=toolhouse-community&template_name=adventai-d1&owner=%40me&name=th-project&description=AdventAI+Day+1+Fork&visibility=public)
-  
-  > [!WARNING]
-  > We recommend forking the app first instead of directly cloning so you can add your own changes on your copy as you go. This also allows you to open a PR easily and showcase your app to other participants!
+
+> [!WARNING]
+> We recommend forking the app first instead of directly cloning so you can add your own changes on your copy as you go. This also allows you to open a PR easily and showcase your app to other participants!
 
 - Execute the following in your terminal, replacing your username below:
 
