@@ -72,7 +72,8 @@ On Day 1️⃣, we are unwrapping an AI-powered Meal Planner App, designed to tr
 
 The app can deploy on any service that can host Python 3.12. For convenience, we made it easy to deploy on Heroku and Render.
 
-[ADD BUTTONS]
+[![Deploy to Heroku](https://img.shields.io/badge/deploy%20to%20heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)](https://www.heroku.com/deploy) 
+[![Deploy to Render](https://img.shields.io/badge/Deploy%20to%20Render-%23000000.svg?style=for-the-badge&logo=render&logoColor=white)](https://render.com/deploy)
 
 ## Getting Started
 
