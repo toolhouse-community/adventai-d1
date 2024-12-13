@@ -1,5 +1,7 @@
 # Hello AdventAI - Day 1️⃣
 
+![Banner](repository-assets/banner.png)
+
 [![Fork](https://img.shields.io/badge/CLONE%20THIS%20REPO-0088FF?style=for-the-badge)](https://github.com/new?template_owner=toolhouse-community&template_name=adventai-d1&owner=%40me&name=th-adventai-d1&description=AdventAI+Day+1+Fork&visibility=public)
 
 ## Table of Contents
@@ -56,6 +58,8 @@ Toolhouse is the first cloud platform that allows developers to quickly build, m
 ✅ Fantastic Developer Experience
 
 ## About the App
+
+![Screengrab](repository-assets/screen.gif)
 
 On Day 1️⃣, we are unwrapping an AI-powered Meal Planner App, designed to transform the way you approach nutrition, cooking, and meal preparation. The capabilities include but are not limited to:
 
